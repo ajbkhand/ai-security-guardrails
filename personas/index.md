@@ -5,19 +5,33 @@ title: Personas
 
 # Personas
 
-This section defines responsibilities for different roles involved in AI delivery.
+Different roles are responsible for different aspects of AI security and governance.
 
-## Roles
+## Programme leads
 
-- Programme leads
-- Project and product managers
-- Technologists
+Accountable for:
+- Risk ownership
+- Governance
+- Public trust
 
-Each role has specific responsibilities across the lifecycle.
+➡️ [Programme leads checklist](programme-leads/)
 
-## Checklists
+---
 
-- Programme leads checklist
-- Project and product managers checklist
-- Technologists checklist
-``
+## Project and product managers
+
+Responsible for:
+- Embedding guardrails into delivery
+- Planning testing and compliance
+
+➡️ [Project and product managers checklist](project-managers/)
+
+---
+
+## Technologists
+
+Responsible for:
+- Implementing technical controls
+- Securing systems and data
+
+➡️ [Technologists checklist](technologists/)
