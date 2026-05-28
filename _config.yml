@@ -1,12 +1,21 @@
-title: Agents & MCP Guidance for all
+title: Defra AI Security Guardrails
 
 permalink: pretty
 
 header_links:
-  GitHub: https://github.com/ajbkhand/architecture
+  Overview: /overview/
+  Start here: /decision/
+  Lifecycle: /lifecycle/
+  Guardrail tiers: /guardrail-tiers/
+  Personas: /personas/
+  Platforms: /platforms/
+  Threats: /attack-vectors/
+  Red teaming: /red-teaming/
+  Checklists: /checklists/
+  Glossary: /glossary/
 
-footer_links:
-  Accessibility: https://ajbkhand.github.io/architecture/accessibility
+
+
 
 defaults:
   -
