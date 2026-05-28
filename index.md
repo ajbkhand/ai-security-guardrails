@@ -31,6 +31,10 @@ This creates risks including:
 
 ## Start here
 
-- Decision questions  
-- Lifecycle guidance  
-- Guardrail tiers  
+## Start here
+
+- [Decision questions]({{ '/decision/' | relative_url }})  
+- [Lifecycle guidance]({{ '/lifecycle/' | relative_url }})  
+- [Guardrail tiers]({{ '/guardrail-tiers/' | relative_url }})  
+- [Personas]({{ '/personas/' | relative_url }})  
+- [Checklists]({{ '/checklists/' | relative_url }})  
