@@ -5,33 +5,10 @@ title: Personas
 
 # Personas
 
-Different roles are responsible for different aspects of AI security and governance.
+This section defines responsibilities for different roles.
 
-## Programme leads
+## Roles
 
-Accountable for:
-- Risk ownership
-- Governance
-- Public trust
-
-➡️ [Programme leads checklist](programme-leads/)
-
----
-
-## Project and product managers
-
-Responsible for:
-- Embedding guardrails into delivery
-- Planning testing and compliance
-
-➡️ [Project and product managers checklist](project-managers/)
-
----
-
-## Technologists
-
-Responsible for:
-- Implementing technical controls
-- Securing systems and data
-
-➡️ [Technologists checklist](technologists/)
+- Programme leads → programme-leads/
+- Project managers → project-managers/
+- Technologists → technologists/
