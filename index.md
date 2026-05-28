@@ -1,37 +1,36 @@
 ---
 layout: default
-title: Agentic AI Guidance
+title: AI Security Guardrails
 ---
 
-# Agentic AI Guidance (Defra)
+# Defra AI Security Guardrails
 
-This site provides guidance, guardrails, and patterns for designing and delivering agentic AI systems in Defra.
+These guardrails define the **minimum security expectations** for AI systems across Defra.
 
-## What is agentic AI?
+They apply to:
+- All AI workloads (models, pipelines, applications)
+- All platforms (Azure, AWS, CDP, DASH, suppliers)
+- All lifecycle stages (Concept → Scale)
 
-Agentic AI systems can:
-- Plan multi-step tasks  
-- Call tools and external services  
-- Interact with users and systems  
+## Why this matters
 
-Unlike simple AI, agents can take actions — requiring stronger governance and control.
+AI systems introduce new risks due to:
 
-## What decisions this guidance supports
+- Non-deterministic behaviour  
+- Dependence on large datasets  
+- Ability to interact with users and systems  
 
-- When to use an agent vs workflow vs LLM  
-- Which patterns to use  
-- What controls are required  
-- When MCP (tool use) is appropriate  
-- How to safely operate agents  
+This creates risks including:
+- Prompt injection  
+- Data leakage  
+- Model misuse  
 
-## Non-negotiables
+## Core principle
 
-- Human remains in control for all consequential actions  
-- Data minimisation must be applied  
-- All actions must be logged and auditable  
-- Tool use must be governed  
-- Evaluation and monitoring are mandatory  
+> AI is a technology category. Security must be consistent across all implementations.
 
 ## Start here
 
-➡️ Decision Framework
+- Decision questions  
+- Lifecycle guidance  
+- Guardrail tiers  
