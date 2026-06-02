@@ -160,6 +160,15 @@ An AI system in Defra is:
 
 # Summary
 
+
 All AI projects must:
 
 1. Confirm AI is appropriate  
+2. Apply the correct guardrail tier  
+3. Follow the lifecycle  
+4. Implement security controls  
+5. Test thoroughly  
+6. Monitor continuously  
+
+> AI must be safe, controlled, and accountable from design through to operation.
+
