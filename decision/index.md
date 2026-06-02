@@ -196,3 +196,38 @@ Once you have completed this:
 # Key principle
 
 > Start simple, scale safely, and apply controls proportionate to risk.
+>
+> ## Decision flow
+
+```mermaid
+flowchart TD
+
+A[Start: Define your problem] --> B{Is AI needed?}
+
+B -->|No| C[Use non-AI solution<br/>Stop]
+B -->|Yes| D{External users?}
+
+D -->|Yes| E[Apply Tier 1 controls<br/>Transparency + Red-teaming]
+D -->|No| F{Influences decisions?}
+
+F -->|Yes| G[Apply Tier 0 controls<br/>ATRS + DPIA + Fairness testing]
+F -->|No| H[Apply Tier 2 minimum controls]
+
+E --> I[Choose delivery platform]
+G --> I
+H --> I
+
+I --> J[Identify lifecycle stage<br/>Concept → Incubate → Pilot → Scale]
+
+J --> K[Apply lifecycle checklist]
+
+K --> L[Implement controls + Test]
+
+L --> M{Ready for release?}
+
+M -->|No| K
+M -->|Yes| N[Deploy and monitor]
+
+N --> O[Continuous monitoring<br/>Drift, misuse, incidents]
+
+``
