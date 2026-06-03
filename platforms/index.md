@@ -60,7 +60,7 @@ Platforms typically provide:
 
 Use this diagram to understand what the platform provides and what you must implement.
 
-![]({{ "/images/platform-offerings.png" | relative_url }})
+![]({{ "/images/platform-offerings-2.png" | relative_url }})
 
 *Figure: Platform-provided controls vs team responsibilities*
 
