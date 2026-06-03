@@ -1,152 +1,154 @@
 ---
 layout: default
-title: Guardrail tiers
+title: Apply guardrail tiers
 ---
 
-# Guardrail tiers
+# Apply guardrail tiers
 
-Guardrail tiers define the **minimum security controls required** for AI systems in Defra.
+Use this page to apply the **correct level of security controls** to your AI system.
 
-All AI projects must apply **Tier 2 controls as a baseline**, with additional controls depending on risk.
-
-## How to use this page
-
-1. Start with **Tier 2 (mandatory for all AI)**
-2. Check if your system is:
-   - Public-facing → add Tier 1  
-   - Decision-influencing or high-risk → add Tier 0  
-3. Apply controls proportionately across the lifecycle  
+All AI systems must apply **minimum controls**, then add more controls based on risk.
 
 ---
 
-# Tier 2 — Minimum (all AI systems)
+# Identify the required tier
 
-These controls apply to **every AI workload**, regardless of scale, platform, or use case.
-
-## Required controls
-
-- Data integrity and provenance  
-- Access control (least privilege)  
-- Encryption (at rest and in transit)  
-- Secure development and supply chain practices  
-- Monitoring and alerting  
-- Incident response and recovery  
-- Documentation and traceability  
-- DPIA triage (Data Protection Impact Assessment)  
-- Multi-region and data residency checks (where applicable)  
-
-## Outcome
-
-All AI systems must be:
-
-- Secure by design  
-- Observable and auditable  
-- Built on trusted data  
+You must decide which tiers apply to your system.
 
 ---
 
-# Tier 1 — Public, external, or decision-influencing AI
+## Always apply Tier 2 (minimum controls)
 
-Apply this tier **in addition to Tier 2** when your AI:
+✅ This applies to **all AI systems**
 
-- Is accessible outside Defra or its ALBs  
-- Interacts with citizens, businesses, or external users  
-- Influences decisions affecting people or public outcomes  
+You must:
 
-## Additional required controls
+- Protect data integrity and provenance  
+- Apply least privilege access  
+- Encrypt data at rest and in transit  
+- Log all activity  
+- Monitor and alert on issues  
+- Prepare incident response  
 
-- Adversarial testing and robustness validation  
-- AI red-teaming prior to release  
-- Clear user disclosures (how AI is used and its limitations)  
-- Human fallback or escalation routes  
-- Publication and maintenance of an ATRS (Algorithmic Transparency Recording Standard)  
-
-## Outcome
-
-AI systems must be:
-
-- Transparent to users  
-- Tested against misuse  
-- Supported by human oversight  
+➡️ All systems start here  
 
 ---
 
-# Tier 0 — High-risk AI systems
+## Add Tier 1 if the system is public or externally used
 
-Apply this tier **in addition to Tier 1 and Tier 2** when your AI:
+Apply Tier 1 if:
 
-- Has significant impact on individuals, environments, or public decisions  
-- Operates in regulatory, enforcement, or safety-critical contexts  
-- Uses sensitive or high-risk data  
-
-## Additional required controls
-
-- Expanded bias and fairness testing  
-- Enhanced explainability and auditability  
-- Stronger governance and assurance processes  
-- Formal change control and periodic re-assurance  
-- Ongoing evaluation and monitoring of impacts  
-
-## Outcome
-
-AI systems must be:
-
-- Fair and explainable  
-- Continuously validated  
-- Governed proportionately to risk  
+- External users interact with the system  
+- The system is publicly accessible  
+- The system provides advice or outputs to users  
 
 ---
 
-# Key principles
+### You must:
 
-## 1. Same baseline for all systems
-
-All AI, regardless of platform or team, must meet the same minimum standard.
-
-## 2. Controls scale with risk
-
-Higher-risk systems require:
-- More testing  
-- More transparency  
-- Stronger governance  
-
-## 3. Tiers are additive
-
-Each tier builds on the previous:
-
-| Tier | Applies to | Controls |
-|------|-----------|---------|
-| Tier 2 | All AI | Baseline controls |
-| Tier 1 | Public / external / decision-use | Adds transparency and testing |
-| Tier 0 | High-risk | Adds assurance and governance |
-
-## 4. Lifecycle matters
-
-Controls must be applied progressively:
-
-- Concept → identify risk  
-- Incubate → design securely  
-- Pilot → validate controls  
-- Scale → monitor and govern  
+- ✅ Provide clear user disclosures  
+- ✅ Enable human fallback or escalation  
+- ✅ Perform robustness testing  
+- ✅ Conduct AI red-teaming  
 
 ---
 
-# Quick decision guide
+⚠️ Do not publish a system externally without these controls
 
-Use this to determine your tier:
+---
 
-- Is the system public-facing? → **Add Tier 1**  
-- Does it affect decisions about people or outcomes? → **Add Tier 1 + Tier 0**  
-- Does it use sensitive data or operate in high-risk context? → **Apply Tier 0**  
+## Add Tier 0 if the system affects decisions or outcomes
+
+Apply Tier 0 if:
+
+- The system influences decisions about people  
+- The system affects public outcomes  
+- The system operates in a high-risk context  
+
+---
+
+### You must:
+
+- ✅ Complete a high-risk DPIA  
+- ✅ Publish and maintain an ATRS  
+- ✅ Test for bias and fairness  
+- ✅ Improve explainability  
+- ✅ Apply stronger governance and assurance  
+
+---
+
+⚠️ Do not use AI for decisions without these controls
+
+---
+
+# Understand how tiers work
+
+Tiers are **additive**.
+
+You must apply all relevant tiers.
+
+---
+
+## Example
+
+| Scenario | Required tiers |
+|---------|---------------|
+| Internal tool | Tier 2 |
+| Public chatbot | Tier 2 + Tier 1 |
+| Decision-support system | Tier 2 + Tier 1 + Tier 0 |
+
+---
+
+# Apply tiers across the lifecycle
+
+You must apply controls at every stage:
+
+- Concept → identify risk level  
+- Incubate → design controls  
+- Pilot → test controls  
+- Scale → monitor and maintain controls  
+
+➡️ {{ '/lifecycle/' | relative_url }}Follow the lifecycle  
+
+---
+
+# Do
+
+- ✅ Start with Tier 2 for all systems  
+- ✅ Add Tier 1 for external use  
+- ✅ Add Tier 0 for decision impact  
+- ✅ Apply controls early in design  
+
+---
+
+# Do not
+
+- ❌ Treat all systems the same  
+- ❌ Skip controls for “low-risk” systems  
+- ❌ Deploy externally without testing  
+- ❌ Use AI in decisions without assurance  
+
+---
+
+# What good looks like
+
+An AI system in Defra:
+
+- Applies controls proportionate to risk  
+- Is tested before release  
+- Is transparent to users  
+- Is monitored continuously  
 
 ---
 
 # Summary
 
-All AI systems must:
+You must:
 
-- Meet **minimum security controls (Tier 2)**  
-- Add **transparency and robustness (Tier 1)** where exposed or influential  
-- Apply **enhanced assurance (Tier 0)** where risk is highest  
+1. Apply Tier 2 controls to all systems  
+2. Add Tier 1 if the system is external  
+3. Add Tier 0 if the system affects decisions  
+4. Apply controls across the lifecycle  
 
+> Higher risk requires stronger controls.
 
