@@ -56,6 +56,14 @@ Platforms typically provide:
 
 ✅ These are inherited controls  
 
+## Platform responsibilities
+
+Use this diagram to understand what the platform provides and what you must implement.
+
+{{ "/images/platform-offerings.png" | relative_url }}
+
+*Figure: Platform-provided controls vs team responsibilities*
+
 ---
 
 # Understand what you must still do
