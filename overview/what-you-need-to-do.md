@@ -10,6 +10,14 @@ This page summarises the **minimum actions required** to deliver AI safely in De
 Use this as a quick reference before starting or approving any AI work.
 
 ---
+## What you need to do (at a glance)
+
+Use this diagram to understand the key actions required.
+
+{{ "/images/what-you-need-to-do.png" | relative_url }}
+
+*Figure: Summary of required actions for AI systems*
+
 
 # 1. Confirm AI is appropriate
 
