@@ -1,100 +1,197 @@
 ---
 layout: default
-title: Attack vectors
+title: Understand AI risks
 ---
 
-# AI attack vectors
+# Understand AI risks
 
-AI systems introduce **new classes of security risk** beyond traditional systems.
+Use this page to identify and manage the **key security risks in AI systems**.
 
-These risks must be understood and mitigated **at each stage of the lifecycle**.
-
-## Key principle
-
-> The risk is not what the AI says — it is what the AI can be made to do.
+AI systems can be manipulated in ways that traditional systems cannot.
 
 ---
 
-# Core attack vectors
+## What you must do
 
-All AI systems must consider the following threats:
+You must:
+
+- ✅ Identify relevant attack vectors early  
+- ✅ Design controls during Incubate  
+- ✅ Test systems before release  
+- ✅ Monitor for misuse in production  
+
+➡️ {{ '/checklists/lifecycle-checklists/' | relative_url }}Follow the lifecycle  
+
+---
+
+# Identify the main risks
+
+All AI systems must consider these attack vectors:
 
 - Data poisoning  
 - Adversarial inputs  
 - Prompt injection  
-- Model misuse or repurposing  
-
-Each occurs at different lifecycle stages.
+- Model misuse  
 
 ---
 
-# Lifecycle view of risk
+# Understand when risks occur
 
-| Stage | Primary risk |
-|------|--------------|
+Different risks appear at different stages:
+
+| Stage | Key risk |
+|------|---------|
 | Incubate | Data poisoning |
 | Pilot | Prompt injection and adversarial inputs |
 | Scale | Model misuse and drift |
 
-➡️ Go to Lifecycle  
+➡️ {{ '/lifecycle/' | relative_url }}Follow the lifecycle  
 
 ---
 
-# Attack vector overview
+# Data poisoning
 
-## Data poisoning
+Malicious or incorrect data is introduced into training datasets.
 
-Malicious or incorrect data introduced during training can corrupt the model.
+This can:
 
-➡️ data-poisoning/
-
----
-
-## Adversarial inputs
-
-Carefully crafted inputs designed to cause model errors.
-
-➡️ adversarial-inputs/
+- Corrupt model behaviour  
+- Introduce bias  
+- Reduce reliability  
 
 ---
 
-## Prompt injection (LLMs)
+## You must
 
-Malicious prompts override system instructions or expose data.
-
-➡️ prompt-injection/
-
----
-
-## Model misuse or repurposing
-
-Models used outside their intended purpose.
-
-➡️ model-misuse/
+- ✅ Validate data sources and provenance  
+- ✅ Restrict write access to datasets  
+- ✅ Version datasets and maintain lineage  
+- ✅ Detect anomalies and outliers  
+- ✅ Verify labels and annotations  
 
 ---
 
-# What you must do
+⚠️ Do not train models on untrusted or unverified data  
 
-All projects must:
+---
 
-- Identify relevant attack vectors early  
-- Apply controls during design (Incubate stage)  
-- Test for attacks during Pilot (red-teaming)  
-- Monitor for misuse in Scale  
+# Adversarial inputs
 
-➡️ See: Red teaming  
-➡️ See: Lifecycle checklists  
+Inputs are designed to cause incorrect outputs.
+
+This is common in:
+
+- Computer vision  
+- NLP and classification systems  
+
+---
+
+## You must
+
+- ✅ Perform adversarial testing  
+- ✅ Validate and sanitise inputs  
+- ✅ Add human review for high-risk outputs  
+- ✅ Test edge cases and variations  
+
+---
+
+⚠️ Do not assume models behave correctly under all inputs  
+
+---
+
+# Prompt injection (LLMs)
+
+Malicious prompts are used to override system instructions.
+
+This is a critical risk for LLM-based systems.
+
+---
+
+## You must
+
+- ✅ Protect system prompts  
+- ✅ Apply input sanitisation  
+- ✅ Use content safety filters  
+- ✅ Monitor prompt behaviour  
+- ✅ Restrict access to sensitive data  
+
+---
+
+⚠️ Do not expose sensitive data to untrusted inputs  
+
+---
+
+# Model misuse or repurposing
+
+Models are used outside their intended purpose.
+
+This can lead to:
+
+- Incorrect decisions  
+- Ethical or compliance risks  
+- Loss of trust  
+
+---
+
+## You must
+
+- ✅ Define intended use clearly (model cards)  
+- ✅ Restrict access using RBAC  
+- ✅ Monitor usage patterns  
+- ✅ Detect unusual or unauthorised use  
+
+---
+
+⚠️ Do not allow models to be used beyond approved scope  
+
+---
+
+# Apply controls across the lifecycle
+
+You must:
+
+- Identify risks at Concept  
+- Design controls at Incubate  
+- Test at Pilot  
+- Monitor at Scale  
+
+---
+
+# Do
+
+- ✅ Treat attack vectors as core design requirements  
+- ✅ Test systems under adversarial conditions  
+- ✅ Monitor continuously after deployment  
+
+---
+
+# Do not
+
+- ❌ Assume AI systems are safe by default  
+- ❌ Skip adversarial testing  
+- ❌ Ignore misuse or drift  
+
+---
+
+# What good looks like
+
+An AI system in Defra:
+
+- Is robust against manipulation  
+- Detects misuse early  
+- Protects sensitive data  
+- Maintains performance under attack  
 
 ---
 
 # Summary
 
-AI systems must be designed to:
+You must:
 
-- Prevent manipulation  
-- Detect misuse  
-- Remain robust under attack  
+1. Identify attack vectors early  
+2. Apply controls during design  
+3. Test before release  
+4. Monitor and respond in production  
 
-> Attack vectors must be treated as core design concerns, not afterthoughts.
+> AI systems must be resilient to manipulation and misuse.
 ``
