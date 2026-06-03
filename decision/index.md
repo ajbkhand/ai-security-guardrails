@@ -5,229 +5,155 @@ title: Start here
 
 # Start here
 
-Use this page to determine:
+Use this page to:
 
-- Whether you should build an AI system  
-- What type of system to build  
-- What security controls are required  
+- Decide if you should use AI  
+- Identify the required controls  
+- Choose what to do next  
 
 This should take **less than 5 minutes**.
 
 ---
 
-# Step 1 — Is AI the right solution?
+## Decide if you should use AI
 
-## Ask:
+Ask:
 
 - Is the problem complex or unpredictable?  
-- Does it require interpretation, reasoning, or pattern recognition?  
+- Does it require judgement or pattern recognition?  
 
-## If NO
+### If no
 
-➡️ Use:
-- Deterministic workflows  
-- Traditional automation  
-- Search or reporting tools  
-
-✅ Stop here — do not build AI
+➡️ Use a non-AI solution  
+✅ Stop here  
 
 ---
 
-## If YES
+### If yes
 
-➡️ Continue to Step 2
-
----
-
-# Step 2 — Will this AI be used externally?
-
-## Ask:
-
-- Will anyone outside Defra or its ALBs interact with this system?  
-
-Examples:
-- Public chatbot  
-- External API  
-- Advisory tool  
+➡️ Continue  
 
 ---
 
-## If YES
+## Check if the system is public-facing
 
-✅ You must apply:
+Ask:
 
-- **Tier 1 guardrails**  
-- User transparency and disclosures  
-- Human fallback  
-- Red-teaming and robustness testing  
+- Will external users interact with this system?  
 
-➡️ Continue to Step 3
+### If yes
 
----
+✅ You must:
 
-## If NO
+- Apply **Tier 1 controls**  
+- Provide clear user disclosures  
+- Enable human fallback  
+- Perform red-teaming  
 
-➡️ Continue to Step 3
-
----
-
-# Step 3 — Does it influence decisions?
-
-## Ask:
-
-- Does this system affect decisions about people, funding, or public outcomes?
-
-Examples:
-- Risk scoring  
-- Eligibility decisions  
-- Policy interpretation  
+➡️ Continue  
 
 ---
 
-## If YES
+### If no
 
-✅ You must apply:
-
-- **Tier 1 + Tier 0 guardrails**  
-- DPIA (high risk)  
-- ATRS (mandatory)  
-- Bias and fairness testing  
-
-➡️ Continue to Step 4
+➡️ Continue  
 
 ---
 
-## If NO
+## Check if the system affects decisions
 
-➡️ Continue to Step 4
+Ask:
 
----
+- Does this system influence decisions about people or public outcomes?  
 
-# Step 4 — Choose delivery route
+### If yes
 
-Select your platform:
+✅ You must:
 
-- DASH (Databricks)  
-- CDP (Core Delivery Platform)  
-- CCoE (cloud platform)  
-- Supplier-hosted  
+- Apply **Tier 0 controls**  
+- Complete a DPIA (high risk)  
+- Publish an ATRS  
+- Test for bias and fairness  
 
-✅ This determines **how controls are implemented**, not whether they apply
-
----
-
-# Step 5 — Identify your lifecycle stage
-
-Choose your current stage:
-
-- Concept → defining the problem  
-- Incubate → building and validating  
-- Pilot → testing before release  
-- Scale → operating in production  
-
-➡️ Go to:
-
-- Lifecycle  
+➡️ Continue  
 
 ---
 
-# Step 6 — Apply required guardrails
+### If no
+
+✅ Apply Tier 2 minimum controls  
+
+➡️ Continue  
+
+---
+
+## Choose how you will build it
+
+Select your delivery route:
+
+- DASH  
+- CDP  
+- CCoE  
+- Supplier  
+
+✅ This affects implementation, not requirements  
+
+---
+
+## Follow the lifecycle
+
+You must:
+
+- Define risks (Concept)  
+- Design securely (Incubate)  
+- Test before release (Pilot)  
+- Monitor in production (Scale)  
+
+👉 {{ '/lifecycle/' | relative_url }}Follow the lifecycle
+
+---
+
+## Apply required controls
 
 All systems must:
 
-- Apply **Tier 2 (minimum controls)**  
+- Apply Tier 2 controls  
 - Add Tier 1 or Tier 0 where required  
 
-➡️ Go to:
-
-- Guardrail tiers  
+👉 {{ '/guardrail-tiers/' | relative_url }}Apply guardrail tiers
 
 ---
 
-# Step 7 — Follow your role checklist
+## Complete your role checklist
 
-Different roles must complete different tasks.
+You must follow the checklist for your role:
 
-➡️ Go to:
-
-- Personas  
+👉 {{ '/personas/' | relative_url }}Go to personas
 
 ---
 
-# Summary (decision rules)
+## Do
 
-## Do not proceed if:
+- ✅ Start with a clear problem  
+- ✅ Apply controls based on risk  
+- ✅ Test before release  
 
-- The use case is unclear  
-- AI is not necessary  
-- Risks are not understood  
+## Do not
 
----
-
-## Minimum requirements for all AI
-
-- Defined use case and outcome  
-- Security controls applied (Tier 2)  
-- Data handled appropriately  
-- System is auditable and monitored  
+- ❌ Proceed without understanding risks  
+- ❌ Skip governance or testing  
+- ❌ Deploy without monitoring  
 
 ---
 
-## Additional requirements (if applicable)
+## Summary
 
-| Condition | Required controls |
-|----------|------------------|
-| External users | Tier 1 (transparency + testing) |
-| Decision impact | Tier 0 (fairness + governance) |
-| High-risk data | Enhanced controls |
+You must:
 
----
+1. Decide if AI is appropriate  
+2. Identify the risk level  
+3. Apply the correct controls  
+4. Test before release  
+5. Monitor continuously  
 
-# What to do next
-
-Once you have completed this:
-
-1. Move to Lifecycle guidance  
-2. Apply Guardrail tiers  
-3. Complete your role checklist  
-
----
-
-# Key principle
-
-> Start simple, scale safely, and apply controls proportionate to risk.
->
-> ## Decision flow
-
-```mermaid
-flowchart TD
-
-A[Start: Define your problem] --> B{Is AI needed?}
-
-B -->|No| C[Use non-AI solution<br/>Stop]
-B -->|Yes| D{External users?}
-
-D -->|Yes| E[Apply Tier 1 controls<br/>Transparency + Red-teaming]
-D -->|No| F{Influences decisions?}
-
-F -->|Yes| G[Apply Tier 0 controls<br/>ATRS + DPIA + Fairness testing]
-F -->|No| H[Apply Tier 2 minimum controls]
-
-E --> I[Choose delivery platform]
-G --> I
-H --> I
-
-I --> J[Identify lifecycle stage<br/>Concept → Incubate → Pilot → Scale]
-
-J --> K[Apply lifecycle checklist]
-
-K --> L[Implement controls + Test]
-
-L --> M{Ready for release?}
-
-M -->|No| K
-M -->|Yes| N[Deploy and monitor]
-
-N --> O[Continuous monitoring<br/>Drift, misuse, incidents]
-
-``
+> Do not proceed unless risks are understood and controlled.
