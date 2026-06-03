@@ -7,7 +7,7 @@ title: Lifecycle
 
 Use this diagram to understand where controls apply.
 
-{{ "/images/ai-lifecycle.png" | relative_url }}
+![AI lifecycle]({{ "/images/ai-lifecycle.png" | relative_url }})
 
 *Figure: AI lifecycle (Concept → Incubate → Pilot → Scale)*
 
